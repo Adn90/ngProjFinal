@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { ClienteManterComponent } from './cliente/cliente-manter/cliente-manter.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { ProdutoManterComponent } from './produto/produto-manter/produto-manter.component';
+import { VendaComponent } from './venda/venda.component';
+import { VendaManterComponent } from './venda/venda-manter/venda-manter.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ProdutoManterComponent } from './produto/produto-manter/produto-manter.
     HomeComponent,
     ClienteManterComponent,
     ProdutoComponent,
-    ProdutoManterComponent
+    ProdutoManterComponent,
+    VendaComponent,
+    VendaManterComponent
   ],
   imports: [
     BrowserModule,

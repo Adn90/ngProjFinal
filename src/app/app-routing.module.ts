@@ -5,6 +5,8 @@ import { HomeComponent } from "./home/home.component";
 import { ClienteManterComponent } from "./cliente/cliente-manter/cliente-manter.component";
 import { ProdutoComponent } from './produto/produto.component';
 import { ProdutoManterComponent } from './produto/produto-manter/produto-manter.component';
+import { VendaComponent } from './venda/venda.component';
+import { VendaManterComponent } from './venda/venda-manter/venda-manter.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent, pathMatch: "full" },
@@ -32,6 +34,21 @@ const routes: Routes = [
   {
     path: "produto/alterar/:id",
     component: ProdutoManterComponent,
+    pathMatch: "full"
+  },
+  {
+    path: "venda",
+    component: VendaComponent,
+    pathMatch: "full"
+  },
+  {
+    path: "venda/incluir",
+    component: VendaManterComponent,
+    pathMatch: "full"
+  },
+  {
+    path: "venda/alterar/:id",
+    component: VendaManterComponent,
     pathMatch: "full"
   },
 
