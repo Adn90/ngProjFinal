@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row" style="background-color: #0069d9; margin-bottom: 20px;">
+    <div class="col-lg-12">
+      <!-- head -->
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a
+            class="nav-link disabled"
+            href="#"
+            tabindex="-1"
+            aria-disabled="true"
+            ><h1 style="color: aliceblue;">Sistema de Estoque</h1></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-2">
+      <!-- menu -->
+      <!-- https://getbootstrap.com/docs/4.4/components/navs/ -->
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cliente">Clientes</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/produto">Produtos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">Vendas</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="col-10">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
