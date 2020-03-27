@@ -4,7 +4,7 @@ import { Vendaitens } from './vendaItens';
 
 export class Venda {
     codigo: string = '';
-    cliente: Cliente;
-    listaDeVendas: Vendaitens;
+    cliente: Cliente = new Cliente();
+    listaDeVendas: Vendaitens[] = [];
     dataVenda: Date;
 }
