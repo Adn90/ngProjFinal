@@ -59,6 +59,10 @@ export class VendaComponent implements OnInit {
   }
 
   recarregar() {
-    location.reload();
+    this._vendaService
+      .consultar("")
+      .subscribe((vendas: Venda[]) => {
+        this.listaDeVendas = vendas;
+      });
   }
 }

@@ -67,6 +67,10 @@ export class ClienteComponent implements OnInit {
   }
 
   recarregar() {
-    location.reload();
+    this._clienteService
+      .consultar("")
+      .subscribe((cliente: Cliente[]) => {
+        this.listaDeClientes = cliente;
+      });
   }
 }

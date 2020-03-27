@@ -65,6 +65,10 @@ export class ProdutoComponent implements OnInit {
   }
 
   recarregar() {
-    location.reload();
+    this._produtoService
+      .consultar("")
+      .subscribe((produto: Produto[]) => {
+        this.listaDeProdutos = produto;
+      });
   }
 }

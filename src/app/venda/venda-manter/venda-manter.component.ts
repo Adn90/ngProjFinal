@@ -14,7 +14,6 @@ import { Vendaitens } from "../servico/vendaItens";
   styleUrls: ["./venda-manter.component.css"]
 })
 export class VendaManterComponent implements OnInit {
-  
   listaDeClientes: Cliente[] = [];
 
   venda: Venda = new Venda();
@@ -38,8 +37,6 @@ export class VendaManterComponent implements OnInit {
   ngOnInit(): void {
     this.pesquisarClientes();
     this.pesquisarProdutos();
-    this.identificarOperacao();
-
   }
 
   pesquisarClientes() {
@@ -60,13 +57,9 @@ export class VendaManterComponent implements OnInit {
 
   incluir() {
     this._vendaService.incluir(this.venda).subscribe((venda: Venda) => {
-      alert(venda['mensagem']);
+      alert(venda["mensagem"]);
       this.voltar();
     });
-  }
-
-  alterar() {
-
   }
 
   adicionar() {
@@ -78,17 +71,5 @@ export class VendaManterComponent implements OnInit {
     this.venda.listaDeVendas = this.venda.listaDeVendas.filter(
       obj => obj !== vendaItem
     );
-  }
-
-  // não faz sentido
-  identificarOperacao() {
-    this.nomeVenda = this._activatedRoute.snapshot.params.id;
-    if (this.nomeVenda != null) {
-      this.operacao = "Alterar";
-      this._vendaService.consultar(this.nomeVenda).subscribe((venda: Venda) => {
-        this.venda = venda[0];
-      });
-      
-    }
   }
 }
