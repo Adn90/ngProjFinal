@@ -29,6 +29,8 @@
                   <th></th>
                   <th>Codigo</th>
                   <th>Data da Venda</th>
+                  <th>Cliente</th>
+                  <th>Cidade</th>
                 </tr>
               </thead>
               <tbody>
@@ -42,6 +44,8 @@
                   </th>
                   <th>{{ venda.codigo }}</th>
                   <td>{{ venda.data | date: "dd/MM/yyyy" }}</td>
+                  <td>{{ venda.cliente.nome }}</td> 
+                  <td>{{ venda.cliente.cidade }}</td>   
                 </tr>
               </tbody>
             </table>
